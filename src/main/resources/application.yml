@@ -1,0 +1,22 @@
+server:
+  port: 8080
+##################### SPRING GLOBAL #################################
+spring:
+  ##################### DATA SOURCE #################################
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    ##################### MY SQL DATABASE #################################
+    url: jdbc:postgresql://dbpostgres:5432/java_test_application
+    username: postgres
+    password: password
+  ##################### JPA USED SPRING DATA #################################
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  sql:
+    init:
+      mode: always
